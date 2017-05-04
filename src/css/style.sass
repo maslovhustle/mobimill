@@ -1,0 +1,823 @@
+$coffee: #fff5eb
+$coffee-text: #c5a185
+$black: #30292a
+$grey: #acaaaa
+$paralax: #efefef
+
+
+
+body
+  font-size: 13px
+  font-weight: normal
+  color: $black
+  overflow-x: hidden
+a
+  text-decoration: none
+  cursor: pointer
+  color: $black
+  &:hover
+    text-decoration: none
+  &:focus
+    text-decoration: none
+    outline: none
+
+.container
+  padding: 0
+  @media (min-width: 1300px)
+    width: 1380px
+
+
+.center
+  text-align: center
+
+.clearfix
+  clear: both
+
+.h1
+  color: #060101
+  font-family: 'cormorant_garamondbold'
+  font-size: 18px
+  line-height: 30px
+  text-transform: uppercase
+  letter-spacing: 0.4em
+  margin: 0
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    background-color: #c5a185
+    width: 60px
+    height: 1px
+    margin-top: -4px
+    margin-right: 20px
+    margin-left: -80px
+
+
+.i
+  color: $coffee-text
+  font-family: 'cormorant_garamondbold_italic'
+  font-size: 14px
+  line-height: 40px
+  letter-spacing: 0.1em
+
+.btn-more
+  font-size: 10px
+  line-height: 30px
+  letter-spacing: 0.4em
+  font-family: 'latoblack'
+  cursor: pointer
+  text-transform: uppercase
+  &:after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    margin-left: 20px
+    width: 60px
+    height: 1px
+    margin-top: -1px
+    background-color: $black
+
+header
+  .container
+    background: #fff
+
+.owl-prev,
+.owl-next
+  position: absolute
+  padding: 50px
+  background: #fff
+  img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+.owl-dot
+  display: block
+  width: 4px
+  height: 4px
+  background-color: $black
+  border-radius: 100%
+  margin-bottom: 15px
+  margin-left: 2px
+
+.owl-dot.active
+  width: 8px
+  height: 8px
+  border-radius: 100%
+  background: transparent
+  border: 1px solid $coffee-text
+  margin-left: 0
+
+.owl-prev
+  &:after
+    content: ''
+    width: 1px
+    height: 40px
+    position: absolute
+    top: 30px
+    right: 0
+    background-color: #eaebf2
+  &:hover img
+    transform: rotate(360deg)
+    transition: 0.2s
+.owl-next
+  &:hover img
+    transform: rotate(-360deg)
+    transition: 0.2s
+
+
+.nav
+  display: table
+  width: 100%
+  max-width: 1180px
+  margin: 40px auto
+  font-family: 'latoblack'
+  font-size: 10px
+  letter-spacing: 0.4em
+  line-height: 40px
+  text-transform: uppercase
+  &__item
+    display: table-cell
+    text-align: center
+
+
+
+.main
+  .container
+    &:before
+      content: ''
+      position: absolute
+      left: -90%
+      top: -150px
+      background-color: #fff5eb
+      width: 100%
+      height: 80%
+      z-index: -1
+
+.owl-grab ~ .main-slider:before
+  opacity: 0
+  -webkit-transform: translate(200px, -15px)
+  -ms-transform: translate(200px, -15px)
+  transform: translate(200px, -15px)
+
+
+.main-slider
+  &:before
+    position: absolute
+    top: 35.5%
+    left: -webkit-calc(100% - 152px)
+    left: calc(100% - 152px)
+    height: 1px
+    width: -webkit-calc((100vw - 1280px) / 2 + 152px)
+    width: calc((100vw - 1280px) / 2 + 152px)
+    display: block
+    content: ''
+    background: #c5a185
+    -webkit-transform: translate(0, -15px)
+    -ms-transform: translate(0, -15px)
+    transform: translate(0, -15px)
+    z-index: 100
+    -webkit-transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),width 0.6s cubic-bezier(0.19, 1, 0.22, 1),-webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),width 0.6s cubic-bezier(0.19, 1, 0.22, 1),-webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),width 0.6s cubic-bezier(0.19, 1, 0.22, 1)
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),width 0.6s cubic-bezier(0.19, 1, 0.22, 1),-webkit-transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+  .owl-dots
+    position: absolute
+    top: 50%
+    left: -70px
+  .owl-prev
+    right: 0
+    bottom: 0
+  .owl-next
+    right: -100px
+    bottom: 0
+  &__block
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    width: 50%
+    height: 50%
+  &__title
+    font-size: 24px
+    font-family: 'Cormorant-Bold'
+    letter-spacing: 0.4em
+    line-height: 40px
+    text-transform: uppercase
+  &__description
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.1em
+    font-family: 'latoregular'
+    margin-top: 50px
+    margin-bottom: 70px
+    margin-right: 100px
+
+
+.about
+  clear: both
+  padding-top: 80px
+  margin-bottom: 125px
+  overflow: hidden
+  .container
+    position: relative
+    max-width: 1180px
+  &__block
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    margin: auto
+    height: 50%
+    padding: 0
+    padding-right: 100px
+  &__description
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.05em
+    font-family: 'latoregular'
+    margin-top: 40px
+    margin-bottom: 60px
+  &__img
+    float: right
+    padding: 0
+    text-align: right
+    
+.services
+  padding-top: 125px
+  position: relative
+  overflow: hidden
+  &:before
+    content: ''
+    position: absolute
+    right: 43%
+    top: 0
+    bottom: -125px
+    background-color: #fff5eb
+    width: 150%
+    height: 100%
+    z-index: -1
+  .container
+    position: relative
+  .btn-more
+    position: absolute
+    bottom: 30px
+    right: 10%
+    z-index: 2
+  .owl-stage-outer
+    padding-bottom: 150px
+  .owl-dots
+    position: absolute
+    bottom: 40px
+    left: 0
+    right: 0
+    text-align: center
+    .owl-dot
+      display: inline-block
+      margin-left: 0
+      margin-right: 15px
+      margin-bottom: 2px
+    .owl-dot.active
+      margin-bottom: 0px
+  .owl-prev
+    left: 0
+    bottom: 0
+  .owl-next
+    left: 100px
+    bottom: 0
+  &__block
+    margin-top: 20px
+    border-top: 1px solid $black
+    padding-top: 25px
+    p 
+      display: inline-block
+      font-family: 'latoblack'
+      font-size: 18px
+      line-height: 30px
+      margin: 0
+    span 
+      display: inline-block
+      float: right
+      font-family: 'latoblack'
+      font-size: 14px
+      line-height: 30px
+      color: $coffee-text
+
+.team
+  padding-top: 150px
+  overflow: hidden
+  .container
+    position: relative
+    max-width: 1180px
+    .h1
+      position: absolute
+      top: 0
+      right: 17%
+      margin: 0
+      padding: 70px
+      background: #fff
+      z-index: 777
+    .owl-dots
+      position: absolute
+      top: 30%
+      left: -50px
+    .owl-prev
+      left: 0
+      bottom: 0
+    .owl-next
+      left: 100px
+      bottom: 0
+  .item
+    img
+      width: 50%
+      padding: 0
+  &__block
+    position: absolute
+    right: 0
+    bottom: 0
+    top: 95px
+    height: 50%
+    margin: auto
+    padding-left: 100px
+  &__title
+    font-family: 'latoblack'
+    font-size: 18px
+    line-height: 40px
+    letter-spacing: 0.1em
+  p
+    font-size: 14px
+    line-height: 30px
+    letter-spacing: 0.1em
+    font-family: 'latoregular'
+    margin-top: 30px
+    margin-bottom: 40px
+
+.news
+  margin-top: 100px
+  overflow: hidden
+  .container
+    max-width: 1180px
+    position: relative
+    .h1
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      height: 1px
+  .news-h1,
+  .news-coffee
+    height: 350px
+    padding: 0
+  .news-coffee
+    position: relative
+  .news-coffee-block
+    background: #fff5eb
+    position: absolute
+    right: -1000px
+    top: 0
+    bottom: -150%
+    left: 0
+  p
+      font-size: 36px
+      text-transform: uppercase
+      line-height: 40px
+      font-family: 'Cormorant-Bold'
+      color: #fae7d2
+      letter-spacing: 0.1em
+      position: absolute
+      bottom: 30px
+      left: 200px
+  &__item
+    padding: 0
+  &__item:nth-child(4)
+    padding-left: 10%
+    padding-top: 5%
+    padding-bottom: 60px
+    z-index: 2
+  &__item-block
+    display: table-caption
+  &__item-date
+      font-family: 'latoblack'
+      font-size: 10px
+      line-height: 40px
+      letter-spacing: 0.1em
+      margin: 10px 0
+      text-transform: uppercase
+      color: $coffee-text
+  &__item-title
+      font-size: 18px
+      font-family: 'cormorant_garamondbold'
+      letter-spacing: 0.05em
+  &__item-coffee
+    img
+      position: absolute
+      top: -20%
+      left: 400px
+      z-index: -1
+  &__btn
+    height: 470px //js !! seteEqualHeight
+    position: relative
+    .news-more
+      cursor: pointer
+      text-align: center
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      width: 280px
+      height: 280px
+      background-color: #fafafa
+      .news-icon
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+        width: 80px
+        height: 80px
+        border: 1px solid #30292a
+        span
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          margin: auto
+          height: 2px
+          width: 18px
+          background-color: #30292a
+          &:nth-child(1)
+            width: 10px
+            left: -7px
+          &:nth-child(2)
+            top: -8px
+          &:nth-child(3)
+            bottom: -8px
+            width: 15px
+            left: -3px
+      p
+        text-transform: uppercase
+        font-family: 'latoblack'
+        font-size: 10px
+        line-height: 40px
+        letter-spacing: 0.4em
+        position: absolute
+        bottom: 50px
+        left: 0
+        right: 0
+        margin: auto
+        color: $black
+
+
+
+.insta
+  margin-top: 200px
+  .container
+    max-width: 1180px
+  &-block
+    width: 50%
+    padding: 150px 0
+  .img-item
+    width: 32.2%
+    float: left
+    position: relative
+    img
+      width: 101.4%
+      height: auto
+      cursor: pointer
+  //.img-item:nth-child(3)
+  //  left: 75% !important
+
+
+.contact
+  margin-top: 100px
+  position: relative
+  padding: 100px 0
+  #map
+    height: 100%
+    left: 0
+    top: 0
+    bottom: 0
+    position: absolute
+  &__block
+    float: right
+    padding-left: 100px
+    padding-right: 0
+    p
+      font-size: 10px
+      letter-spacing: 0.4em
+      line-height: 40px
+      text-transform: uppercase
+      color: $coffee-text
+      font-family: 'latoblack'
+      margin: 60px 0 -10px 0
+  .input--nao
+    position: relative
+    z-index: 1
+    display: inline-block
+    margin-top: 10px
+    width: 100%
+    vertical-align: top
+    overflow: hidden
+  .input__field--nao
+    position: relative
+    display: block
+    float: right
+    border: none
+    border-radius: 0
+    -webkit-appearance: none
+    padding: 30px 0 20px 0
+    width: 100%
+    background: transparent
+    color: $black
+    font-size: 14px
+    letter-spacing: 0.05em
+    font-family: 'latoregular'
+  .input__field--nao:focus
+    outline: none
+  .input__label--nao
+    float: right
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    position: absolute
+    bottom: 20px
+    left: 0
+    display: block
+    width: 100%
+    text-align: left
+    padding: 0
+    pointer-events: none
+    -webkit-transform-origin: 0 0
+    transform-origin: 0 0
+    -webkit-transition: -webkit-transform 0.2s 0.15s, color 1s
+    transition: transform 0.2s 0.15s, color 1s
+    -webkit-transition-timing-function: ease-out
+    transition-timing-function: ease-out
+    font-size: 14px
+    letter-spacing: 0.05em
+    color: $grey
+    font-family: 'latoregular'
+  .input__label-content--nao
+    position: relative
+    display: block
+    width: 100%
+  .graphic--nao
+    position: absolute
+    top: 0
+    left: 0
+    fill: none
+    stroke: #e0e0e0
+    pointer-events: none
+    -webkit-transition: -webkit-transform 0.7s, stroke 0.7s
+    transition: transform 0.7s, stroke 0.7s
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1)
+    transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1)
+  .input__field--nao:focus + .input__label--nao,
+  .input--filled .input__label--nao
+    color: $grey
+    -webkit-transform: translate3d(0, -30px, 0) scale3d(0.90, 0.90, 1)
+    transform: translate3d(0, -30px, 0) scale3d(0.90, 0.90, 1)
+  .input__field--nao:focus ~ .graphic--nao,
+  .input--filled .graphic--nao
+    stroke: #c5a185
+    -webkit-transform: translate3d(-66.6%, 0, 0)
+    transform: translate3d(-66.6%, 0, 0)
+  .input-triangle:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 4px
+    border: 5px solid transparent
+    border-right: 5px solid #e0e0e0
+    border-bottom: 5px solid #e0e0e0
+    transition: 1s
+  .input--filled.input-triangle:after
+    transition: 1s
+    border-right: 5px solid #c19e82
+    border-bottom: 5px solid #c19e82
+
+
+
+.input-services
+  overflow: inherit !important
+  z-index: 2 !important
+.input-services-block
+  position: relative
+  overflow: hidden
+.label-list
+  list-style: none
+  position: absolute
+  top: 100%
+  left: 0
+  right: 0
+  width: 100%
+  background: #fff
+  font-size: 14px
+  line-height: 40px
+  letter-spacing: 0.05em
+  font-family: 'latoregular'
+  color: #30292a
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5)
+  padding: 40px 30px
+  margin: 0
+  display: none
+.label-list
+  label
+    margin-left: 20px
+    cursor: pointer
+.icheckbox_minimal
+  display: inline-block
+  *display: inline
+  vertical-align: middle
+  margin: 0
+  padding: 0
+  width: 18px
+  height: 18px
+  background: #f7f7f7
+  border: 2px solid #f7f7f7
+  cursor: pointer
+.icheckbox_minimal:before
+    content: ''
+    position: absolute
+    display: block
+    height: 9px
+    width: 6px
+    border-right: 2px solid #fff
+    border-bottom: 2px solid #fff
+    right: 0
+    left: 0
+    bottom: 3px
+    margin: auto
+    transition: 0.2s
+    -webkit-transform: rotate(35deg)
+    -moz-transform: rotate(35deg)
+    -ms-transform: rotate(35deg)
+    transform: rotate(35deg)
+    opacity: 0
+.icheckbox_minimal.hover
+  border: 2px solid #c5a185
+.icheckbox_minimal.checked
+  border: 2px solid #c5a185
+  background: #c5a185
+.icheckbox_minimal.checked:before
+  opacity: 1
+
+
+.gmnoprint
+  display: none
+
+footer
+  margin-top: 150px
+  .footer-top
+    display: table
+    text-align: center
+    margin: auto
+    width: 100%
+    font-family: 'latoblack'
+    font-size: 10px
+    line-height: 40px
+    letter-spacing: 0.4em
+    padding: 50px 0
+    text-transform: uppercase
+    nav
+      display: table-cell
+      text-align: left
+    ul
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        display: inline-block
+        width: 16%
+        text-align: left
+    .search
+      display: table-cell
+      text-align: left
+      width: 16%
+      input
+        border: none
+        background: transparent url("../img/Search.svg") left no-repeat
+        outline: none
+        padding-left: 30px
+        font-family: 'latoblack'
+        font-size: 10px
+        line-height: 40px
+        letter-spacing: 0.4em
+        text-transform: uppercase
+        width: 100%
+        max-width: 150px
+        &::-webkit-input-placeholder
+          color: $black
+          font-family: 'latoblack'
+          font-size: 10px
+          line-height: 40px
+          letter-spacing: 0.4em
+          text-transform: uppercase
+        &:-moz-placeholder
+          color: $black
+          font-family: 'latoblack'
+          font-size: 10px
+          line-height: 40px
+          letter-spacing: 0.4em
+          text-transform: uppercase
+        &::-moz-placeholder
+          color: $black
+          font-family: 'latoblack'
+          font-size: 10px
+          line-height: 40px
+          letter-spacing: 0.4em
+          text-transform: uppercase
+        &:-ms-input-placeholder
+          color: $black
+          font-family: 'latoblack'
+          font-size: 10px
+          line-height: 40px
+          letter-spacing: 0.4em
+          text-transform: uppercase
+    .socials
+      display: table-cell
+      text-align: right
+      ul
+        display: table
+        li
+          display: table-cell
+          a
+            display: block
+            height: 15px
+            width: 15px
+            margin: 0 5px
+            transition: 0.3s
+        li:first-child a
+            background: url("../img/Social.svg") 0 no-repeat
+            &:hover
+              background: url("../img/SocialHovers.svg") 0 no-repeat
+              transition: 0.3s
+        li:nth-child(2n) a
+          background: url("../img/Social.svg") 50% no-repeat
+          &:hover
+            background: url("../img/SocialHovers.svg") 50% no-repeat
+            transition: 0.3s
+        li:last-child a
+          background: url("../img/Social.svg") 100% no-repeat
+          &:hover
+            background: url("../img/SocialHovers.svg") 100% no-repeat
+            transition: 0.3s
+  .footer-middle
+    text-align: center
+    border-top: 1px solid #f0f0f0
+    border-bottom: 1px solid #f0f0f0
+    margin-left: -30px
+    margin-right: -30px
+    padding: 60px 0
+
+    p
+      font-family: 'latoregular'
+      font-size: 14px
+      line-height: 40px
+      letter-spacing: 0.05em
+      margin: 0
+    i, a
+      font-family: 'cormorant_garamondbold_italic'
+      font-size: 16px
+      letter-spacing: 0.05em
+      color: $coffee-text
+    &--left
+      float: left
+      text-align: left
+      margin-left: 30px
+    &--center
+      text-align: center
+      display: inline-block
+    &--right
+      display: inline-block
+      text-align: right
+      float: right
+      margin-right: 30px
+  .footer-bottom
+    padding: 50px 0
+    color: $grey
+    font-family: 'latoregular'
+    font-size: 12px
+    line-height: 40px
+    letter-spacing: 0.1em
+    &--left
+      float: left
+      text-align: left
+    &--right
+      text-align: right
+      float: right
+      a
+        color: $grey
+        &:hover
+          text-decoration: underline

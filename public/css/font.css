@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'cormorant_garamondbold';
+    src: url('../fonts/CormorantGaramond-Bold.woff') format('woff'),
+         url('../fonts/CormorantGaramond-Bold.ttf') format('truetype'),
+         url('../fonts/CormorantGaramond-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CormorantGaramond-Bold.svg#CormorantGaramond-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'cormorant_garamondbold_italic';
+    src: url('../fonts/CormorantGaramond-BoldItalic.woff') format('woff'),
+         url('../fonts/CormorantGaramond-BoldItalic.ttf') format('truetype'),
+         url('../fonts/CormorantGaramond-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/CormorantGaramond-BoldItalic.svg#CormorantGaramond-BoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cormorant-Bold';
+    src: url('../fonts/Cormorant-Bold.woff') format('woff'),
+         url('../fonts/Cormorant-Bold.ttf') format('truetype'),
+         url('../fonts/Cormorant-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Cormorant-Bold.svg#Cormorant-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/Lato-Black.woff') format('woff'),
+         url('../fonts/Lato-Black.ttf') format('truetype'),
+         url('../fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-Black.svg#Lato-Black') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/Lato-Regular.woff') format('woff'),
+         url('../fonts/Lato-Regular.ttf') format('truetype'),
+         url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

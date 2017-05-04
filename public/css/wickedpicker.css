@@ -1,0 +1,81 @@
+.wickedpicker {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  max-height: 80px;
+  max-width: 260px;
+  font-size: 14px;
+  line-height: 40px;
+  letter-spacing: 0.05em;
+  font-family: 'latoregular';
+  background: #ffffff;
+  color: #30292a;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  display: none; }
+  .wickedpicker__title {;
+    display: none;
+  }
+
+  .wickedpicker__close {
+    display: none;}
+  .wickedpicker__controls {
+    padding: 20px 0;  }
+    .wickedpicker__controls__control {
+      vertical-align: middle;
+      display: inline-block;
+      font-size: inherit;
+      margin: auto 10px;
+      background: #f7f7f7;
+    }
+.wickedpicker__controls__control span {
+  padding: 10px;
+}
+      .wickedpicker__controls__control-up:before {
+        content: '-';
+      font-weight: bold;}
+      .wickedpicker__controls__control-down:after {
+        content: '+';
+        font-weight: bold;}
+      .wickedpicker__controls__control--separator {
+        display: none; }
+
+.text-center, .wickedpicker__title, .wickedpicker__controls, .wickedpicker__controls__control, .wickedpicker__controls__control--separator, .wickedpicker__controls__control-up, .wickedpicker__controls__control-down {
+  text-align: center; }
+
+.hover-state {
+  color: #c5a185; }
+
+.wickedpicker__controls__control-up,
+.wickedpicker__controls__control-down {
+  cursor: pointer;
+}
+
+.wickedpicker__controls__control--hours, .wickedpicker__controls__control--minutes{
+  outline: none;
+}
+
+
+.clearable-picker {
+  position: relative;
+  display: inline-block; }
+  .clearable-picker > .hasWickedpicker {
+    padding-right: 1em; }
+  .clearable-picker > .hasWickedpicker::-ms-clear {
+    display: none; }
+  .clearable-picker > [data-clear-picker] {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0 0.3em 0.2em;
+    line-height: 1;
+    color: #bababa;
+    cursor: pointer; }
+    .clearable-picker > [data-clear-picker]:hover {
+      color: #a1a1a1; }

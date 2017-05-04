@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'cormorant_garamondbold';
+    src: url('cormorantgaramond-bold-webfont.woff2') format('woff2'),
+         url('CormorantGaramond-Bold.ttf') format('ttf'),
+         url('cormorantgaramond-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'cormorant_garamondbold_italic';
+    src: url('../fonts/cormorantgaramond-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/CormorantGaramond-BoldItalic.ttf') format('ttf'),
+         url('../fonts/cormorantgaramond-bolditalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/lato-black-webfont.woff2') format('woff2'),
+         url('../fonts/Lato-Black.ttf') format('ttf'),
+         url('../fonts/lato-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('../fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../fonts/Lato-Regular.ttf') format('ttf'),
+         url('../fonts/lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
